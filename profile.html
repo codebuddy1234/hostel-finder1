@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder - Profile</title>
+    <link rel="stylesheet" href="afterlogin.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Hostel Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostels.html">Hostels</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile">
+        <h2>Your Profile</h2>
+        
+        <!-- User Information -->
+        <div class="user-info">
+            <h3>Personal Information</h3>
+            <form id="user-info-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="Lokesh" disabled>
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="lokesh@example.com">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" value="1234567890">
+                <button type="button" onclick="updateUserInfo()">Update Information</button>
+            </form>
+        </div>
+
+        <!-- Change Password -->
+        <div class="change-password">
+            <h3>Change Password</h3>
+            <form id="change-password-form">
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" required>
+                <label for="confirm-password">Confirm New Password:</label>
+                <input type="password" id="confirm-password" required>
+                <button type="button" onclick="changePassword()">Change Password</button>
+            </form>
+        </div>
+
+        <!-- Booking History -->
+        <div class="booking-history">
+            <h3>Your Booking History</h3>
+            <ul id="booking-history-list">
+                <!-- Booking history items will be dynamically inserted here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: webmail@example.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

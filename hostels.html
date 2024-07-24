@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostels in Jalgaon - Hostel Finder</title>
+    <link rel="stylesheet" href="afterlogin.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Hostel Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostels.html">Hostels</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hostels Section -->
+    <section class="hostels-container">
+        <h2>Available Hostels in Jalgaon</h2>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search hostels...">
+            <button onclick="searchHostels()" class="btn-primary">Search</button>
+        </div>
+        
+        <div class="hostel-listing" id="hostel-listing">
+            <div class="hostel-item" data-name="Hostel 1" data-description="Located in Shastri Nagar, affordable rates, excellent facilities.">
+                <img src="home.jpeg" alt="Hostel 1">
+                <div class="hostel-info">
+                    <h3>Hostel 1</h3>
+                    <p>Rajmahal Hostel,Located in Shastri Nagar,<br/> <b>affordable rates, excellent facilities.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 2" data-description="Situated on MG Road, comfortable stay with modern amenities.">
+                <img src="home.jpeg" alt="Hostel 2">
+                <div class="hostel-info">
+                    <h3>Hostel 2</h3>
+                    <p>meera Hostel,Situated on MG Road,<br/><b> comfortable stay with modern amenities.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 3" data-description="Near Ring Road, vibrant environment, excellent services.">
+                <img src="home.jpeg" alt="Hostel 3">
+                <div class="hostel-info">
+                    <h3>Hostel 3</h3>
+                    <p>Shri Ram Hostel,Near Ring Road,<br/> <b>vibrant environment, excellent services.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 4" data-description="In Gandhinagar, secure and student-friendly environment.">
+                <img src="home.jpeg" alt="Hostel 4">
+                <div class="hostel-info">
+                    <h3>Hostel 4</h3>
+                    <p>Maax Hostel,In Gandhinagar,<br/><b> secure and student-friendly environment.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 5" data-description="Close to railway station, well-maintained and convenient.">
+                <img src="home.jpeg" alt="Hostel 5">
+                <div class="hostel-info">
+                    <h3>Hostel 5</h3>
+                    <p>Shri Hostel,Close to railway station,<br/><b> well-maintained and convenient.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 6" data-description="Near Bus Stand, affordable and modern facilities.">
+                <img src="home.jpeg" alt="Hostel 6">
+                <div class="hostel-info">
+                    <h3>Hostel 6</h3>
+                    <p>Maratha Hostel,Near Bus Stand,<br/><b> affordable and modern facilities.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 7" data-description="Located in Shivaji Nagar, friendly atmosphere, great facilities.">
+                <img src="home.jpeg" alt="Hostel 7">
+                <div class="hostel-info">
+                    <h3>Hostel 7</h3>
+                    <p>Raj Hostel,Located in Shivaji Nagar,<br/><b> friendly atmosphere, great facilities.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 8" data-description="Near Zilla Parishad, comfortable and affordable.">
+                <img src="home.jpeg" alt="Hostel 8">
+                <div class="hostel-info">
+                    <h3>Hostel 8</h3>
+                    <p>Raisoni Hostel,Near Raisoni College<br/>,<b> comfortable and affordable.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 9" data-description="Situated in Gandhi Chowk, clean and modern amenities.">
+                <img src="home.jpeg" alt="Hostel 9">
+                <div class="hostel-info">
+                    <h3>Hostel 9</h3>
+                    <p>Godavari Hostel,Situated in Gandhi Chowk, Near Godavari College,<br/><b> clean and modern amenities.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+            <div class="hostel-item" data-name="Hostel 10" data-description="Located in Prabhat Colony, peaceful and secure environment.">
+                <img src="home.jpeg" alt="Hostel 10">
+                <div class="hostel-info">
+                    <h3>Hostel 10</h3>
+                    <p>Located in Prabhat Colony,Near MJ College,<br/><b> peaceful and secure environment.</b></p>
+                    <a href="booking.html" class="btn-secondary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: webmail@example.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

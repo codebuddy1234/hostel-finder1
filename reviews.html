@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder - Reviews</title>
+    <link rel="stylesheet" href="afterlogin.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Hostel Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostels.html">Hostels</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h2>User Reviews</h2>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-review" placeholder="Search reviews...">
+            <button onclick="searchReviews()" class="btn-primary">Search</button>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="review-list" id="review-list">
+            <div class="review-item" data-name="Amit Sharma">
+                <h3>Amit Sharma</h3>
+                <p>Hostel 1 - Great stay, very comfortable and clean!</p>
+                <div class="rating">Rating: ★★★★☆</div>
+            </div>
+            <div class="review-item" data-name="Neha Gupta">
+                <h3>Neha Gupta</h3>
+                <p>Hostel 2 - Decent place, friendly staff but could be cleaner.</p>
+                <div class="rating">Rating: ★★★☆☆</div>
+            </div>
+            <div class="review-item" data-name="Ravi Patel">
+                <h3>Ravi Patel</h3>
+                <p>Hostel 3 - Excellent location and amenities. Highly recommend!</p>
+                <div class="rating">Rating: ★★★★★</div>
+            </div>
+            <div class="review-item" data-name="Priya Singh">
+                <h3>Priya Singh</h3>
+                <p>Hostel 4 - Affordable and decent for a short stay.</p>
+                <div class="rating">Rating: ★★★☆☆</div>
+            </div>
+            <div class="review-item" data-name="Karan Mehta">
+                <h3>Karan Mehta</h3>
+                <p>Hostel 5 - Not the best experience. Needs improvement.</p>
+                <div class="rating">Rating: ★★☆☆☆</div>
+            </div>
+            <div class="review-item" data-name="Sunita Rao">
+                <h3>Sunita Rao</h3>
+                <p>Hostel 6 - Great value for money. Friendly staff.</p>
+                <div class="rating">Rating: ★★★★☆</div>
+            </div>
+            <div class="review-item" data-name="Anjali Verma">
+                <h3>Anjali Verma</h3>
+                <p>Hostel 7 - Very clean and well-maintained. Will visit again.</p>
+                <div class="rating">Rating: ★★★★★</div>
+            </div>
+            <div class="review-item" data-name="Rahul Deshmukh">
+                <h3>Rahul Deshmukh</h3>
+                <p>Hostel 8 - Convenient location but a bit noisy.</p>
+                <div class="rating">Rating: ★★★☆☆</div>
+            </div>
+            <div class="review-item" data-name="Pooja Iyer">
+                <h3>Pooja Iyer</h3>
+                <p>Hostel 9 - Lovely atmosphere and great service.</p>
+                <div class="rating">Rating: ★★★★☆</div>
+            </div>
+            <div class="review-item" data-name="Vikas Nair">
+                <h3>Vikas Nair</h3>
+                <p>Hostel 10 - Perfect for budget travelers. Very satisfied.</p>
+                <div class="rating">Rating: ★★★★☆</div>
+            </div>
+        </div>
+
+        <!-- Add Review Form -->
+        <div class="add-review">
+            <h3>Add Your Review</h3>
+            <form id="review-form" onsubmit="handleReviewSubmit(event)">
+                <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                <select id="review-hostel">
+                    <option value="Hostel 1">Hostel 1</option>
+                    <option value="Hostel 2">Hostel 2</option>
+                    <option value="Hostel 3">Hostel 3</option>
+                    <option value="Hostel 4">Hostel 4</option>
+                    <option value="Hostel 5">Hostel 5</option>
+                    <option value="Hostel 6">Hostel 6</option>
+                    <option value="Hostel 7">Hostel 7</option>
+                    <option value="Hostel 8">Hostel 8</option>
+                    <option value="Hostel 9">Hostel 9</option>
+                    <option value="Hostel 10">Hostel 10</option>
+                </select>
+                <textarea id="review-text" placeholder="Your Review" required></textarea>
+                <label for="review-rating">Rating:</label>
+                <select id="review-rating">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: webmail@example.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
