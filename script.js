@@ -215,3 +215,56 @@ function loadBookingHistory() {
     });
 }
 
+//for booking.html 
+
+function submitBooking() {
+    const hostel = document.getElementById('hostel').value;
+    const checkIn = document.getElementById('check-in').value;
+    const checkOut = document.getElementById('check-out').value;
+    const guests = document.getElementById('guests').value;
+    const paymentMethod = document.getElementById('payment-method').value;
+    const amount = document.getElementById('amount').value;
+
+    // Perform validation
+    if (!hostel || !checkIn || !checkOut || !guests || !paymentMethod) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Store booking data in localStorage
+    const bookingData = {
+        hostel,
+        checkIn,
+        checkOut,
+        guests,
+        paymentMethod,
+        amount
+    };
+    localStorage.setItem('latestBooking', JSON.stringify(bookingData));
+
+    // Redirect to bookings page
+    window.location.href = 'bookings.html';
+}
+
+/*document.addEventListener('DOMContentLoaded', () => {
+    const bookingDetails = document.getElementById('booking-details');
+    const latestBooking = JSON.parse(localStorage.getItem('latestBooking'));
+
+    if (latestBooking) {
+        const { hostel, checkIn, checkOut, guests, paymentMethod, amount } = latestBooking;
+        bookingDetails.innerHTML = `
+            <p><strong>Hostel:</strong> ${hostel}</p>
+            <p><strong>Check-in Date:</strong> ${checkIn}</p>
+            <p><strong>Check-out Date:</strong> ${checkOut}</p>
+            <p><strong>Number of Guests:</strong> ${guests}</p>
+            <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+            <p><strong>Amount:</strong> ${amount}</p>
+            <p><strong>Note:</strong> Your booking is 100% refundable if you do not like the hostel.</p>
+        `;
+        
+        // Clear the stored booking data
+        localStorage.removeItem('latestBooking');
+    } else {
+        bookingDetails.innerHTML = '<p>No recent bookings found.</p>';
+    }
+});*/

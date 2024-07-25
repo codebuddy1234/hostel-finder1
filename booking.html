@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder - Booking</title>
+    <link rel="stylesheet" href="afterlogin.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Hostel Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostels.html">Hostels</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking">
+        <h2>Book Your Hostel</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="hostel">Select Hostel:</label>
+                <select id="hostel" required>
+                    <option value="" disabled selected>Select a hostel</option>
+                    <option value="Hostel 1">Hostel 1 - Rajmahal Hostel, Located in Shastri Nagar, ₹800/night</option>
+                    <option value="Hostel 2">Hostel 2 - Meera Hostel, Situated on MG Road, ₹700/night</option>
+                    <option value="Hostel 3">Hostel 3 - Shri Ram Hostel, Near Ring Road, ₹850/night</option>
+                    <option value="Hostel 4">Hostel 4 - Maax Hostel, In Gandhinagar, ₹900/night</option>
+                    <option value="Hostel 5">Hostel 5 - Shri Hostel, Close to railway station, ₹750/night</option>
+                    <option value="Hostel 6">Hostel 6 - Maratha Hostel, Near Bus Stand, ₹650/night</option>
+                    <option value="Hostel 7">Hostel 7 - Raj Hostel, Located in Shivaji Nagar, ₹950/night</option>
+                    <option value="Hostel 8">Hostel 8 - Raisoni Hostel, Near Raisoni College, ₹700/night</option>
+                    <option value="Hostel 9">Hostel 9 - Godavari Hostel, Situated in Gandhi Chowk, ₹800/night</option>
+                    <option value="Hostel 10">Hostel 10 - Prabhat Colony Hostel, Near MJ College, ₹850/night</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" required>
+                    <option value="" disabled selected>Select a payment method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="upi">UPI (PhonePe, Paytm, Google Pay)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Booking Amount:</label>
+                <input type="text" id="amount" value="₹1000" readonly>
+            </div>
+
+            <button type="button" onclick="submitBooking()">Submit Booking</button>
+        </form>
+
+        <!-- Booking Confirmation Section -->
+        <div id="booking-confirmation" style="display: none;">
+            <h3>Booking Confirmation</h3>
+            <p id="confirmation-details"></p>
+            <p><strong>Note:</strong> Your booking is 100% refundable if you do not like the hostel.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: webmail@example.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
