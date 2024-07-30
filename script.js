@@ -37,19 +37,25 @@ function showSlides() {
 // Function to filter hostels based on search input
 function searchHostels() {
     const input = document.getElementById('search-input').value.toLowerCase();
+    console.log('Search input:', input); // Debugging line
     const hostelItems = document.getElementsByClassName('hostel-item');
+    console.log('Total hostels:', hostelItems.length); // Debugging line
 
     for (let i = 0; i < hostelItems.length; i++) {
-        const name = hostelItems[i].getAttribute('data-name').toLowerCase();
-        const description = hostelItems[i].getAttribute('data-description').toLowerCase();
+        const hostelInfo = hostelItems[i].getElementsByClassName('hostel-info')[0];
+        const hostelName = hostelInfo.getElementsByTagName('h3')[0].innerText.toLowerCase();
+        const hostelDesc = hostelInfo.getElementsByTagName('p')[0].innerText.toLowerCase();
 
-        if (name.includes(input) || description.includes(input)) {
+        console.log(`Hostel ${i + 1}: ${hostelName} - ${hostelDesc}`); // Debugging line
+
+        if (hostelName.includes(input) || hostelDesc.includes(input)) {
             hostelItems[i].style.display = 'block';
         } else {
             hostelItems[i].style.display = 'none';
         }
     }
 }
+
 
 // Function to filter bookings based on search input
 function searchBookings() {

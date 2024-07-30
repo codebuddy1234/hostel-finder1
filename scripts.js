@@ -56,3 +56,4 @@ function myfunction() {
         show.type='password';
     }
 }
+
